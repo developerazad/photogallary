@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'AlbumController@index');
+Route::get('/album/create', 'AlbumController@create');
+Route::post('/album/store', 'AlbumController@store');
