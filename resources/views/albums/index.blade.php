@@ -7,7 +7,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h4>Photo Gallary</h4>
+    <h4>Photo Album</h4>
     @if(count($albums) > 0)
         @foreach($albums as $album)
             <div class="col-md-4">
