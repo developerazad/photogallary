@@ -14,7 +14,8 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        return view('albums.index');
+        $albums = Album::with('Photo')->get();
+        return view('albums.index')->with('albums',$albums);
     }
 
     /**
@@ -37,7 +38,7 @@ class AlbumController extends Controller
     {
         $this->validate($request,[
             'name' => 'required',
-            'cover_image' => 'required|max:1999'
+            'cover_image' => 'required|max:4999'
         ]);
 
         // Get filename with extension
@@ -63,7 +64,7 @@ class AlbumController extends Controller
         $album->cover_image = $fileToStore;
         $album->save();
 
-        return redirect('/album/create')->with('success','Album Has been Created');
+        return redirect('/')->with('success','Album Has been Created');
     }
 
     /**
@@ -74,7 +75,7 @@ class AlbumController extends Controller
      */
     public function show($id)
     {
-        //
+        return 123;
     }
 
     /**
