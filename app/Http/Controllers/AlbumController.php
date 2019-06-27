@@ -76,7 +76,7 @@ class AlbumController extends Controller
      */
     public function show($id)
     {
-        $album = Album::with('Photo')->find($id); //echo "<pre>"; print_r($album); exit();
+        $album = Album::with('Photo')->find($id);
         return view('albums.show')->with('album',$album);
     }
 

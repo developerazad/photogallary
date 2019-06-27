@@ -12,7 +12,7 @@
         @foreach($albums as $album)
             <div class="col-md-4">
                 <a href="{{ url('/album/'.$album->id) }}">
-                    <img class="img-thumbnail" src="albums/{{$album->cover_image}}" alt="{{$album->name}}">
+                    <img class="img-thumbnail" src="{{ asset( '/albums/' . $album->cover_image) }}" alt="{{$album->name}}">
                 </a>
                 <br>
                 <h4 class="text-center">{{$album->name}}</h4>

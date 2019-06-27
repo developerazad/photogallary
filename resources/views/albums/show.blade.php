@@ -1,7 +1,7 @@
 <style>
     .img-thumbnail{
-        width: 350px!important;
-        height: 280px!important;
+        width: 340px!important;
+        height: 250px!important;
     }
 </style>
 @extends('layouts.app')
@@ -17,7 +17,7 @@
         @foreach($album->photo as $photo)
             <div class="col-md-4">
                 <a href="{{ url('/photo/'.$photo->id) }}">
-                    <img class="img-thumbnail" src="photos/{{$photo->photo}}" alt="{{$photo->title}}">
+                    <img class="img-thumbnail" src="{{ asset( '/photos/' . $photo->photo) }}" alt="{{$photo->title}}">
                 </a>
                 <br>
                 <h4 class="text-center">{{$photo->title}}</h4>

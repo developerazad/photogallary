@@ -10,7 +10,7 @@
                     <form action="{{ url('photo/store') }}" method="POST" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
-                        <input type="text" name="album_id" value="{{ $album_id }}" class="form-control">
+                        <input type="hidden" name="album_id" value="{{ $album_id }}" class="form-control">
 
                         <div class="form-group">
                             <label for="album_name" class="control-label">Title</label>

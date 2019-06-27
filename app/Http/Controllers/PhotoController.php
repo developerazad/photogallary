@@ -37,7 +37,7 @@ class PhotoController extends Controller
     {
         $this->validate($request,[
             'title' => 'required',
-            'photo' => 'required|max:4999'
+            'photo' => 'required|max:9999'
         ]);
 
         // Get filename with extension
