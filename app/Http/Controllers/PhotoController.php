@@ -78,7 +78,8 @@ class PhotoController extends Controller
      */
     public function show($id)
     {
-
+        $photo = Photo::find($id);
+        return view('photos.show')->with('photo',$photo);
     }
 
     /**
@@ -112,6 +113,8 @@ class PhotoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $photo = Photo::find($id);
+        $photo->delete();
+        return redirect('/album/'.$photo->album_id);
     }
 }
