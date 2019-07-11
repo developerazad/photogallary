@@ -19,12 +19,15 @@
                             <label for="city_id" class="control-label">Description</label>
                             <input type="text" class="form-control" id="city_id" name="description" placeholder="Enter Description">
                         </div>
+                        <div class="form-group">
+                            <label for="album_name" class="control-label">Date</label>
+                            <input type="date" class="form-control" id="" name="date" placeholder="" onkeydown="return false">
+                        </div>
 
                         <div class="form-group">
                             <label for="city_id" class="control-label">Cover Image</label>
                             <input type="file" class="form-control" id="city_id" name="cover_image" placeholder="">
                         </div>
-
                         <div class="form-group"> <!-- Submit Button -->
                             <button type="submit" class="btn btn-primary pull-right">Create</button>
                         </div>
